@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Report</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="reports.css">
+    <!-- Include SheetJS for export functionality -->
+    <script src="https://cdn.sheetjs.com/xlsx-0.18.5/package/dist/xlsx.full.min.js"></script>
+    
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <h2>Greentinsolutions</h2>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="employees.html">Employees</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="header">
+                <h1>Employee Attendance Dashboard</h1>
+                <div class="user-info">
+                    <span>Raj Dubal</span>
+                    <img src="profile.jpg" alt="Profile Picture">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="report-type">Report Type:</label>
+                <div>
+                    <input type="radio" id="current-date" name="report-type" value="current" checked>
+                    <label for="current-date">Current Date</label>
+                    <input type="radio" id="date-range" name="report-type" value="range">
+                    <label for="date-range">Date Range</label>
+                </div>
+            </div>
+
+            <div id="current-date-container">
+                <!-- Existing year, month, and date dropdowns -->
+                <div class="form-group">
+                    <label for="year">Year:</label>
+                    <select id="year"></select>
+                </div>
+
+                <div class="form-group">
+                    <label for="month">Month:</label>
+                    <select id="month"></select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <select id="date"></select>
+                </div>
+            </div>
+
+            <div id="date-range-container" style="display: none;">
+                <div class="form-group">
+                    <label for="start-date">Start Date:</label>
+                    <input type="date" id="start-date">
+                </div>
+
+                <div class="form-group">
+                    <label for="end-date">End Date:</label>
+                    <input type="date" id="end-date">
+                </div>
+            </div>
+
+            <!-- The existing status dropdown and buttons remain unchanged -->
+            <div class="form-group">
+                <label for="status">Status:</label>
+                <select id="status">
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+            </div>
+
+            <div class="button-group">
+                <button onclick="fetchAttendance()">Get Report</button>
+                <button onclick="exportToExcel()">Export to Excel</button>
+            </div>
+
+            <table id="attendance-table" style="display: none;">
+                <thead>
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Role</th>
+                        <th>In Time</th>
+                        <th>Out Time</th>
+                    </tr>
+                </thead>
+                <tbody id="employee-list"></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="reports.js">
+
+</script>
+
+</html>

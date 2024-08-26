@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Attendance</title>
+    <script defer src="./library/face-api.min.js"></script>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <h2>Greentinsolutions</h2>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="employees.html">Employees</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <h1>Attendance</h1>
+                <div class="user-info">
+                    <span>Raj Dubal</span>
+                    <img src="profile.jpg" alt="Profile Picture">
+                </div>
+            </div>
+            <div class="container">
+                <select id="cameraSelect"></select>
+                <input type="text" id="ipCameraUrl" placeholder="Enter IP Camera URL">
+                <button id="startIpCamera">Start IP Camera</button>
+                <video id="video" width="640" height="480" autoplay muted></video>
+                <img id="faceImage" src="" alt="Captured Face" style="display:none;">
+            </div>
+        </div>
+    </div>
+    <script defer src="attendance.js"></script>
+</body>
+</html>

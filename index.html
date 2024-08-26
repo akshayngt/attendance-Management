@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <form id="loginForm">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" id="username" placeholder="Username" required>
+                <box-icon type='solid' name='user' color="white"></box-icon>
+            </div>
+            <div class="input-box">
+                <input type="password" id="password" placeholder="Password" required>
+                <box-icon name='lock-alt' type='solid' color="white"></box-icon>
+            </div>
+
+            <div class="remember-forget">
+                <label><input type="checkbox" id="rememberMe">Remember me</label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+
+            <div class="register-link">
+                <p>Don't have an account?<br> <a href="#">Register</a></p>
+            </div>
+        </form>
+
+        <div id="loginResult" style="display:none;">
+            <h2>Login Successful!</h2>
+            <p><strong>Username:</strong> <span id="displayUsername"></span></p>
+            <p><strong>Remember Me:</strong> <span id="displayRememberMe"></span></p>
+        </div>
+    </div>
+    </div>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="login.js"></script>
+</body>
+
+</html>

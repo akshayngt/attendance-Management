@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee List</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="employees.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <h2>Greentinsolutions</h2>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="employees.html">Employees</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="header">
+                <h1>Employee</h1>
+                <div class="user-info">
+                    <span>Raj Dubal</span>
+                    <img src="profile.jpg" alt="Profile Picture">
+                </div>
+            </div>
+            <table id="attendance-table" style="display: none;">
+                <thead>
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Role</th>
+                        <!-- <th>In Time</th>
+                        <th>Out Time</th> -->
+                    </tr>
+                </thead>
+                <tbody id="employee-list"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="employees.js"></script>
+</body>
+</html>

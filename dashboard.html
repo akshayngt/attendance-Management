@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition Dashboard</title>
+    <script defer src="./library/face-api.min.js"></script>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <h2>Greentinsolutions</h2>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="employees.html">Employees</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <h1>Dashboard</h1>
+                <div class="user-info">
+                    <span>Raj Dubal</span>
+                    <img src="profile.jpg" alt="Profile Picture">
+                </div>
+            </div>
+            <div class="content">
+                <h2>Overview</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3>Total Employees</h3>
+                        <a href="employees.html">
+                            <p id="total-employees">Loading...</p>
+                        </a>
+                    </div>
+                    <div class="stat-item">
+                        <h3>Present Today</h3>
+                        <a href="reports.html">
+                            <p id="present-today">Loading...</p>
+                        </a>
+                    </div>
+                    <div class="stat-item">
+                        <h3>Absent Today</h3>
+                        <p id="absent-today">Loading...</p>
+                    </div>
+                </div>
+                <h2>Employee Attendance</h2>
+                <!-- <table>
+                    <thead>
+                        <tr>
+                            <th>Employee ID</th>
+                            <th>Name</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Time In</th>
+                            <th>Time Out</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table> -->
+            </div>
+            <div class="container">
+                <select id="cameraSelect"></select>
+                <input type="text" id="ipCameraUrl" placeholder="http://192.168.2.2">
+                <button id="startIpCamera">Start IP Camera</button>
+                <video id="video" width="640" height="480" autoplay muted></video>
+                <img id="faceImage" src="" alt="Captured Face" style="display:none;">
+            </div>
+        </div>
+    </div>
+    <script defer src="script.js"></script>
+</body>
+
+</html>
