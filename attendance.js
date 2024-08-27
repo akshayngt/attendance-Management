@@ -135,7 +135,7 @@ video.addEventListener("play", async () => {
 });
 
 async function loadLabeledImages() {
-    const labels = ['Manoj', 'Vijay','Pravin','Rushikesh','Aniket','Abhishek','Shubham','Akshay','Mahesh','Akshay_s','Rajdeep','Sanket'];
+    const labels = ['Manoj', 'Vijay','Pravin','Rushikesh','Aniket','Abhishek','Shubham','Akshay','Mahesh','Akshay_s','Rajdeep','Sanket','Tejas'];
     const imageCount = 3;
     
     return Promise.all(
